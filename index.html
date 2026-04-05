@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="trang-ch">
+
+      <!-- ===== NAVIGATION ===== -->
+      <nav class="navigate" id="main-nav">
+        <img class="image" src="https://c.animaapp.com/mnlcux0onfUOca/img/image-1-2.png" alt="Logo" />
+
+        <div class="tm-kim">
+          <div class="frame-3">
+            <div class="search">
+              <img class="icon" src="https://c.animaapp.com/mnlcux0onfUOca/img/icon.svg" alt="search icon" />
+            </div>
+            <div class="frame-4">
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Tìm kiếm"
+                aria-label="Tìm kiếm"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop nav links -->
+        <div class="nav-links">
+          <a href="#trang-chu" class="nav-item active" data-section="trang-chu">
+            <div class="div-2">
+              <div class="text-wrapper-6">Trang chủ</div>
+            </div>
+          </a>
+          <div class="nav-item gii-thiu" id="dropdown-trigger" data-section="gioi-thieu">
+            <div class="text-wrapper-7">Giới thiệu ▲</div>
+            <!-- Dropdown menu -->
+            <div class="dropdown-menu" id="dropdown-menu">
+              <a href="#about" class="dropdown-item">Về chúng tôi</a>
+              <a href="#mission" class="dropdown-item">Sứ mệnh</a>
+              <a href="#team" class="dropdown-item">Đội ngũ</a>
+            </div>
+          </div>
+          <a href="#kien-thuc" class="nav-item" data-section="kien-thuc">
+            <div class="kin-thc">
+              <div class="text-wrapper-6">Kiến thức</div>
+            </div>
+          </a>
+          <a href="#lien-he" class="nav-item" data-section="lien-he">
+            <div class="lin-h">
+              <div class="text-wrapper-6">Liên hệ</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="ng-k btn-dang-ky" onclick="openModal('modal-register')">
+            <div class="rectangle-8"></div>
+            <div class="text-wrapper-8">Đăng ký</div>
+          </button>
+          <button class="ng-nhp btn-dang-nhap" onclick="openModal('modal-login')">
+            <div class="text-wrapper-9">Đăng nhập</div>
+          </button>
+        </div>
+
+        <!-- Hamburger button (mobile only) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Mở menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <!-- Mobile slide-down menu -->
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <a href="#trang-chu" class="mobile-nav-item active" data-section="trang-chu">Trang chủ</a>
+        <a href="#gioi-thieu" class="mobile-nav-item" data-section="gioi-thieu">Giới thiệu</a>
+        <a href="#kien-thuc" class="mobile-nav-item" data-section="kien-thuc">Kiến thức</a>
+        <a href="#lien-he" class="mobile-nav-item" data-section="lien-he">Liên hệ</a>
+        <div class="mobile-actions">
+          <button class="btn-dang-ky mobile-btn" onclick="openModal('modal-register')">Đăng ký</button>
+          <button class="btn-dang-nhap mobile-btn" onclick="openModal('modal-login')">Đăng nhập</button>
+        </div>
+      </div>
+
+      <!-- ===== HERO BANNER ===== -->
+      <section id="trang-chu" class="hero-section">
+        <img class="rectangle" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-15.png" alt="Banner" />
+      </section>
+
+      <!-- ===== SLIDESHOW ===== -->
+      <section class="slideshow-section" id="gioi-thieu">
+        <div class="tranh-lt-auto" id="slide-display"></div>
+        <div class="nh-lt">
+          <div class="frame">
+            <button class="frame-2" id="prev-btn" aria-label="Trước">
+              <div class="rectangle-7"></div>
+              <div class="text-wrapper-4">&lt;</div>
+            </button>
+            <button class="frame-2" id="next-btn" aria-label="Tiếp">
+              <div class="rectangle-7"></div>
+              <div class="text-wrapper-4">&gt;</div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRODUCT CARDS ===== -->
+      <section class="mua-bn" id="kien-thuc">
+
+        <!-- Card 1: Poster Mew -->
+        <div class="product-card poster-mew" tabindex="0">
+          <img class="rectangle-3" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-24-1.png" alt="Poster Mew" />
+          <div class="gi">
+            <div class="text-wrapper price-original">120.000 VNĐ</div>
+            <div class="div price-sale">100.000 VNĐ</div>
+            <img class="line" src="https://c.animaapp.com/mnlcux0onfUOca/img/line-1.svg" alt="" />
+          </div>
+          <button class="mua-ngay buy-btn" onclick="addToCart(this, 'Poster Mew', '100.000 VNĐ')">
+            <div class="text-wrapper-2">Mua ngay</div>
+          </button>
+        </div>
+
+        <!-- Card 2: Poster Lugia -->
+        <div class="product-card poster-lugia" tabindex="0">
+          <div class="rectangle-4"></div>
+          <button class="div-wrapper buy-btn" onclick="addToCart(this, 'Poster Lugia', '300.000 VNĐ')">
+            <div class="text-wrapper-2">Mua ngay</div>
+          </button>
+          <img class="rectangle-5" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-25-1.png" alt="Poster Lugia" />
+          <div class="gi-2">
+            <div class="text-wrapper price-original">400.000 VNĐ</div>
+            <div class="div price-sale">300.000 VNĐ</div>
+            <img class="line" src="https://c.animaapp.com/mnlcux0onfUOca/img/line-1.svg" alt="" />
+          </div>
+        </div>
+
+        <!-- Card 3: Hoa xanh -->
+        <div class="product-card hoa-xanh" tabindex="0">
+          <img class="rectangle-3" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-26.png" alt="Hoa xanh" />
+          <div class="gi-3">
+            <div class="text-wrapper price-original">400.000 VNĐ</div>
+            <div class="div price-sale">120.000 VNĐ</div>
+            <img class="line" src="https://c.animaapp.com/mnlcux0onfUOca/img/line-1.svg" alt="" />
+          </div>
+          <button class="mua-ngay buy-btn" onclick="addToCart(this, 'Hoa xanh', '120.000 VNĐ')">
+            <div class="text-wrapper-2">Mua ngay</div>
+          </button>
+        </div>
+
+        <!-- Card 4: Hoa trắng -->
+        <div class="product-card hoa-trng" tabindex="0">
+          <img class="rectangle-3" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-27.png" alt="Hoa trắng" />
+          <div class="gi-3">
+            <div class="text-wrapper price-original">120.000 VNĐ</div>
+            <div class="div price-sale">110.000 VNĐ</div>
+            <img class="line" src="https://c.animaapp.com/mnlcux0onfUOca/img/line-1.svg" alt="" />
+          </div>
+          <button class="mua-ngay buy-btn" onclick="addToCart(this, 'Hoa trắng', '110.000 VNĐ')">
+            <div class="text-wrapper-2">Mua ngay</div>
+          </button>
+        </div>
+
+        <!-- Card 5: Hoa -->
+        <div class="product-card hoa" tabindex="0">
+          <button class="div-wrapper buy-btn" onclick="addToCart(this, 'Hoa', '120.000 VNĐ')">
+            <div class="text-wrapper-2">Mua ngay</div>
+          </button>
+          <img class="rectangle-6" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-29.png" alt="Hoa" />
+          <div class="gi-4">
+            <div class="text-wrapper price-original">120.000 VNĐ</div>
+            <img class="line" src="https://c.animaapp.com/mnlcux0onfUOca/img/line-1.svg" alt="" />
+          </div>
+          <div class="text-wrapper-3 price-sale">120.000 VNĐ</div>
+        </div>
+
+      </section>
+
+      <!-- ===== FOOTER BANNERS ===== -->
+      <section class="footer-banners" id="lien-he">
+        <img class="img" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-24.png" alt="Banner trái" />
+        <img class="rectangle-2" src="https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-25.png" alt="Banner phải" />
+      </section>
+
+      <!-- ===== TOAST NOTIFICATION ===== -->
+      <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+      <!-- ===== MODAL: ĐĂNG KÝ ===== -->
+      <div class="modal-overlay" id="modal-register" role="dialog" aria-modal="true" aria-labelledby="register-title">
+        <div class="modal-box">
+          <button class="modal-close" onclick="closeModal('modal-register')" aria-label="Đóng">&times;</button>
+          <h2 class="modal-title" id="register-title">Đăng ký</h2>
+          <form class="modal-form" id="form-register" novalidate onsubmit="handleRegister(event)">
+            <label>
+              Họ và tên
+              <input type="text" name="name" placeholder="Nguyễn Văn A" required />
+              <span class="field-error"></span>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="email@example.com" required />
+              <span class="field-error"></span>
+            </label>
+            <label>
+              Mật khẩu
+              <input type="password" name="password" placeholder="Ít nhất 6 ký tự" required minlength="6" />
+              <span class="field-error"></span>
+            </label>
+            <button type="submit" class="modal-submit">Đăng ký</button>
+            <p class="modal-switch">Đã có tài khoản? <a href="#" onclick="switchModal('modal-register','modal-login')">Đăng nhập</a></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- ===== MODAL: ĐĂNG NHẬP ===== -->
+      <div class="modal-overlay" id="modal-login" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <div class="modal-box">
+          <button class="modal-close" onclick="closeModal('modal-login')" aria-label="Đóng">&times;</button>
+          <h2 class="modal-title" id="login-title">Đăng nhập</h2>
+          <form class="modal-form" id="form-login" novalidate onsubmit="handleLogin(event)">
+            <label>
+              Email
+              <input type="email" name="email" placeholder="email@example.com" required />
+              <span class="field-error"></span>
+            </label>
+            <label>
+              Mật khẩu
+              <input type="password" name="password" placeholder="Mật khẩu của bạn" required />
+              <span class="field-error"></span>
+            </label>
+            <button type="submit" class="modal-submit">Đăng nhập</button>
+            <p class="modal-switch">Chưa có tài khoản? <a href="#" onclick="switchModal('modal-login','modal-register')">Đăng ký</a></p>
+          </form>
+        </div>
+      </div>
+
+    </div><!-- /.trang-ch -->
+
+    <script>
+      /* ========== SLIDESHOW ========== */
+      const slides = [
+        "https://c.animaapp.com/mnlcux0onfUOca/img/image-5-1.png",
+        "https://c.animaapp.com/mnlcux0onfUOca/img/image-3-3.png",
+        "https://c.animaapp.com/mnlcux0onfUOca/img/rectangle-15.png"
+      ];
+      let currentSlide = 0;
+      const slideDisplay = document.getElementById("slide-display");
+
+      function updateSlide() {
+        slideDisplay.style.backgroundImage = "url(" + slides[currentSlide] + ")";
+      }
+      updateSlide();
+
+      document.getElementById("prev-btn").addEventListener("click", function () {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+      });
+      document.getElementById("next-btn").addEventListener("click", function () {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+      });
+
+      /* ========== MOBILE MENU ========== */
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburgerBtn.addEventListener("click", function () {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburgerBtn.classList.toggle("is-open", isOpen);
+        hamburgerBtn.setAttribute("aria-expanded", isOpen);
+        mobileMenu.setAttribute("aria-hidden", !isOpen);
+      });
+
+      document.querySelectorAll(".mobile-nav-item").forEach(function (link) {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("open");
+          hamburgerBtn.classList.remove("is-open");
+          hamburgerBtn.setAttribute("aria-expanded", "false");
+          mobileMenu.setAttribute("aria-hidden", "true");
+        });
+      });
+
+      /* ========== DROPDOWN ========== */
+      const dropdownTrigger = document.getElementById("dropdown-trigger");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+
+      dropdownTrigger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const isActive = dropdownMenu.classList.toggle("open");
+        dropdownTrigger.querySelector(".text-wrapper-7").textContent =
+          isActive ? "Giới thiệu ▼" : "Giới thiệu ▲";
+      });
+
+      document.addEventListener("click", function () {
+        dropdownMenu.classList.remove("open");
+        dropdownTrigger.querySelector(".text-wrapper-7").textContent = "Giới thiệu ▲";
+      });
+
+      /* ========== SMOOTH SCROLL ========== */
+      document.querySelectorAll('a[href^="#"], .nav-item[data-section]').forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          const href = el.getAttribute("href") || ("#" + el.getAttribute("data-section"));
+          if (href && href.startsWith("#")) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          }
+          // update active
+          document.querySelectorAll(".nav-item").forEach(function (n) { n.classList.remove("active"); });
+          document.querySelectorAll(".mobile-nav-item").forEach(function (n) { n.classList.remove("active"); });
+          el.classList.add("active");
+        });
+      });
+
+      /* ========== SEARCH ========== */
+      document.querySelector(".search-input").addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          const q = this.value.trim();
+          if (q) showToast("Tìm kiếm: \"" + q + "\"");
+        }
+      });
+
+      /* ========== ADD TO CART ========== */
+      function addToCart(btn, name, price) {
+        const original = btn.querySelector(".text-wrapper-2").textContent;
+        btn.querySelector(".text-wrapper-2").textContent = "✓ Đã thêm";
+        btn.style.backgroundColor = "#28a745";
+        setTimeout(function () {
+          btn.querySelector(".text-wrapper-2").textContent = original;
+          btn.style.backgroundColor = "";
+        }, 1500);
+        showToast("Đã thêm \"" + name + "\" (" + price + ") vào giỏ hàng!");
+      }
+
+      /* ========== PRODUCT CARD HOVER ========== */
+      document.querySelectorAll(".product-card").forEach(function (card) {
+        card.addEventListener("mouseenter", function () {
+          card.style.transform = "translateY(-4px)";
+          card.style.boxShadow = "0 8px 24px rgba(0,0,0,0.18)";
+        });
+        card.addEventListener("mouseleave", function () {
+          card.style.transform = "";
+          card.style.boxShadow = "";
+        });
+      });
+
+      /* ========== TOAST ========== */
+      let toastTimer;
+      function showToast(msg) {
+        const toast = document.getElementById("toast");
+        toast.textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 3000);
+      }
+
+      /* ========== MODALS ========== */
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+        // clear errors
+        modal.querySelectorAll(".field-error").forEach(function (el) { el.textContent = ""; });
+        modal.querySelectorAll("input").forEach(function (el) { el.classList.remove("input-error"); });
+      }
+      function switchModal(from, to) {
+        closeModal(from);
+        setTimeout(function () { openModal(to); }, 200);
+      }
+      // close on overlay click
+      document.querySelectorAll(".modal-overlay").forEach(function (overlay) {
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeModal(overlay.id);
+        });
+      });
+      // close on Escape
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          document.querySelectorAll(".modal-overlay.open").forEach(function (m) { closeModal(m.id); });
+          mobileMenu.classList.remove("open");
+          hamburgerBtn.classList.remove("is-open");
+        }
+      });
+
+      /* ========== FORM VALIDATION ========== */
+      function validateField(input) {
+        const error = input.parentElement.querySelector(".field-error");
+        input.classList.remove("input-error");
+        error.textContent = "";
+        if (!input.value.trim()) {
+          input.classList.add("input-error");
+          error.textContent = "Trường này không được để trống.";
+          return false;
+        }
+        if (input.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+          input.classList.add("input-error");
+          error.textContent = "Email không hợp lệ.";
+          return false;
+        }
+        if (input.type === "password" && input.minLength > 0 && input.value.length < input.minLength) {
+          input.classList.add("input-error");
+          error.textContent = "Mật khẩu phải có ít nhất " + input.minLength + " ký tự.";
+          return false;
+        }
+        return true;
+      }
+
+      function handleRegister(e) {
+        e.preventDefault();
+        const form = document.getElementById("form-register");
+        const inputs = form.querySelectorAll("input");
+        let valid = true;
+        inputs.forEach(function (inp) { if (!validateField(inp)) valid = false; });
+        if (!valid) return;
+        const btn = form.querySelector(".modal-submit");
+        btn.textContent = "Đang xử lý…";
+        btn.disabled = true;
+        setTimeout(function () {
+          closeModal("modal-register");
+          showToast("Đăng ký thành công! Chào mừng bạn.");
+          btn.textContent = "Đăng ký";
+          btn.disabled = false;
+          form.reset();
+        }, 1000);
+      }
+
+      function handleLogin(e) {
+        e.preventDefault();
+        const form = document.getElementById("form-login");
+        const inputs = form.querySelectorAll("input");
+        let valid = true;
+        inputs.forEach(function (inp) { if (!validateField(inp)) valid = false; });
+        if (!valid) return;
+        const btn = form.querySelector(".modal-submit");
+        btn.textContent = "Đang xử lý…";
+        btn.disabled = true;
+        setTimeout(function () {
+          closeModal("modal-login");
+          showToast("Đăng nhập thành công! Chào mừng trở lại.");
+          btn.textContent = "Đăng nhập";
+          btn.disabled = false;
+          form.reset();
+        }, 1000);
+      }
+
+      // live validate on blur
+      document.querySelectorAll(".modal-form input").forEach(function (inp) {
+        inp.addEventListener("blur", function () { validateField(inp); });
+      });
+    </script>
+  </body>
+</html>
