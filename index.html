@@ -7,193 +7,90 @@
 </head>
 
 <body>
-<div class="trang-ch">
 
 <!-- ===== NAV ===== -->
-<div class="navigate">
+<div class="nav">
 
-  <img class="image" src="images/Logo.png">
+  <img src="logo.png" class="logo">
 
-  <div class="tm-kim">
-    <div class="frame-3">
-      <div class="search">
-        <img class="icon" src="images/search.png">
-      </div>
-      <input class="search-input" placeholder="Tìm kiếm">
-    </div>
-  </div>
+  <input type="text" placeholder="Tìm kiếm" class="search">
 
-  <div class="nav-links">
-    <a href="index.html" class="nav-item active">
-      <div class="text-wrapper-6">Trang chủ</div>
-    </a>
-
-    <div class="nav-item gii-thiu">
-      <div class="text-wrapper-7">Giới thiệu ▲</div>
-      <div class="dropdown-menu">
-        <a href="gioithieu.html" class="dropdown-item">Về chúng tôi</a>
-      </div>
-    </div>
-
-    <a href="kienthuc.html" class="nav-item">
-      <div class="text-wrapper-6">Kiến thức</div>
-    </a>
-
-    <a href="lienhe.html" class="nav-item">
-      <div class="text-wrapper-6">Liên hệ</div>
-    </a>
-  </div>
-
-  <div class="nav-actions">
-    <a href="register.html" class="btn-dang-ky">
-      <div class="ng-k">
-        <div class="rectangle-8"></div>
-        <div class="text-wrapper-8">Đăng ký</div>
-      </div>
-    </a>
-
-    <a href="login.html" class="btn-dang-nhap">
-      <div class="ng-nhp">
-        <div class="text-wrapper-9">Đăng nhập</div>
-      </div>
-    </a>
+  <div class="menu">
+    <a href="index.html">Trang chủ</a>
+    <a href="gioithieu.html">Giới thiệu ▲</a>
+    <a href="kienthuc.html">Kiến thức</a>
+    <a href="lienhe.html">Liên hệ</a>
+    <a href="register.html">Đăng ký</a>
+    <a href="login.html">Đăng nhập</a>
   </div>
 
 </div>
 
-<!-- ===== HERO ===== -->
-<div class="hero-section">
-  <img class="rectangle" src="images/trangchuentre.png">
-</div>
+<!-- ===== BANNER ===== -->
+<img src="trangchuentren.png" class="banner">
 
 <!-- ===== SLIDE ===== -->
-<div class="slideshow-section">
+<div class="slide" id="slide"></div>
 
-  <div class="tranh-lt-auto" id="slide"></div>
-
-  <div class="nh-lt">
-    <div class="frame">
-
-      <button class="frame-2" id="prev">
-        <div class="rectangle-7"></div>
-        <div class="text-wrapper-4"><</div>
-      </button>
-
-      <button class="frame-2" id="next">
-        <div class="rectangle-7"></div>
-        <div class="text-wrapper-4">></div>
-      </button>
-
-    </div>
-  </div>
-
+<div class="btns">
+  <button onclick="prev()"> < </button>
+  <button onclick="next()"> > </button>
 </div>
 
 <!-- ===== PRODUCTS ===== -->
-<div class="mua-bn">
+<div class="products">
 
-  <!-- CARD 1 -->
-  <div class="poster-mew">
-    <img class="rectangle-3" src="images/trangchuauto.png">
-
-    <div class="gi">
-      <div class="text-wrapper">Poster Mew</div>
-      <div class="div">100.000 VNĐ</div>
-    </div>
-
-    <button class="mua-ngay">
-      <span class="text-wrapper-2">Mua ngay</span>
-    </button>
+  <div class="card">
+    <img src="Trangchuauto.png">
+    <p>100.000 VNĐ</p>
   </div>
 
-  <!-- CARD 2 -->
-  <div class="poster-lugia">
-    <img class="rectangle-5" src="images/trangchuauto (2).png">
-
-    <div class="gi-2">
-      <div class="text-wrapper">Poster Lugia</div>
-      <div class="div">300.000 VNĐ</div>
-    </div>
-
-    <button class="div-wrapper">
-      <span class="text-wrapper-2">Mua ngay</span>
-    </button>
+  <div class="card">
+    <img src="trangchuauto (2).png">
+    <p>300.000 VNĐ</p>
   </div>
 
-  <!-- CARD 3 -->
-  <div class="hoa-xanh">
-    <img class="rectangle-3" src="images/trangchuauto (3).png">
-
-    <div class="gi-3">
-      <div class="text-wrapper">Poster Hoa</div>
-      <div class="div">120.000 VNĐ</div>
-    </div>
-
-    <button class="mua-ngay">
-      <span class="text-wrapper-2">Mua ngay</span>
-    </button>
+  <div class="card">
+    <img src="trangchuauto (3).png">
+    <p>120.000 VNĐ</p>
   </div>
 
-  <!-- CARD 4 -->
-  <div class="hoa-trng">
-    <img class="rectangle-3" src="images/trangchuauto (4).png">
-
-    <div class="gi-3">
-      <div class="text-wrapper">Poster Hoa trắng</div>
-      <div class="div">110.000 VNĐ</div>
-    </div>
-
-    <button class="mua-ngay">
-      <span class="text-wrapper-2">Mua ngay</span>
-    </button>
+  <div class="card">
+    <img src="trangchuauto (4).png">
+    <p>110.000 VNĐ</p>
   </div>
 
-  <!-- CARD 5 -->
-  <div class="hoa">
-    <img class="rectangle-6" src="images/Rectangle31.png">
-
-    <div class="gi-4">
-      <div class="text-wrapper">Poster Hoa đỏ</div>
-    </div>
-
-    <div class="text-wrapper-3">120.000 VNĐ</div>
+  <div class="card">
+    <img src="Rectangle 31.png">
+    <p>120.000 VNĐ</p>
   </div>
 
 </div>
 
-<!-- ===== FOOTER ===== -->
-<div class="footer-banners">
-  <img class="img" src="images/trangchuauto.png">
-  <img class="rectangle-2" src="images/trangchuauto (2).png">
-</div>
-
-</div>
-
-<!-- ===== JS ===== -->
 <script>
-const slides = [
-  "images/trangchuauto.png",
-  "images/trangchuauto (2).png",
-  "images/trangchuauto (3).png"
+let slides = [
+  "Trangchuauto.png",
+  "trangchuauto (2).png",
+  "trangchuauto (3).png"
 ];
 
 let i = 0;
-const slide = document.getElementById("slide");
+let slide = document.getElementById("slide");
 
-function showSlide(){
+function show(){
   slide.style.backgroundImage = "url(" + slides[i] + ")";
 }
-showSlide();
+show();
 
-document.getElementById("next").onclick = () => {
-  i = (i + 1) % slides.length;
-  showSlide();
-};
+function next(){
+  i = (i+1)%slides.length;
+  show();
+}
 
-document.getElementById("prev").onclick = () => {
-  i = (i - 1 + slides.length) % slides.length;
-  showSlide();
-};
+function prev(){
+  i = (i-1+slides.length)%slides.length;
+  show();
+}
 </script>
 
 </body>
