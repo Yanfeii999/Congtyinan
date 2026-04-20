@@ -1,4 +1,4 @@
-//Login
+/*LOGIN*/
 *{
   margin:0;
   padding:0;
@@ -22,21 +22,20 @@ body{
   width:100px;
 }
 
-.search-box{
-  margin:0 20px;
-}
-
-.search-box input{
+/* SEARCH */
+.search{
+  margin-left:20px;
   padding:8px 12px;
   border-radius:6px;
   border:none;
-  width:260px;
+  width:250px;
 }
 
 /* MENU */
 .menu{
   margin-left:auto;
   display:flex;
+  align-items:center;
   gap:15px;
 }
 
@@ -46,10 +45,11 @@ body{
   font-size:14px;
 }
 
+/* BUTTON NAV */
 .btn{
   border:1px solid white;
-  padding:4px 10px;
-  border-radius:5px;
+  padding:6px 12px;
+  border-radius:6px;
 }
 
 .active{
@@ -117,7 +117,7 @@ body{
   color:red;
 }
 
-/* BUTTON */
+/* BUTTON LOGIN */
 .btn-login{
   width:100%;
   padding:12px;
@@ -144,5 +144,6 @@ body{
 
   .banner img{
     width:100%;
+    height:auto;
   }
 }
